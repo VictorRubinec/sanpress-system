@@ -1,0 +1,29 @@
+{
+  "name": "sanpress-queue-server",
+  "version": "1.0.0",
+  "description": "Servidor backend de Fila e Atendimento para Sanpress",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon --ignore data/ src/index.js",
+    "migrate": "knex migrate:latest",
+    "migrate:make": "knex migrate:make",
+    "seed": "knex seed:run"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "pino": "^9.1.0",
+    "qrcode": "^1.5.3",
+    "socket.io": "^4.7.5",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}

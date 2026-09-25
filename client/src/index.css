@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+/* BRAND MANUAL CORPORATE TYPOGRAPHY: Qurova (Titles) & Nexa (Body/UI) */
+@font-face {
+  font-family: 'Qurova';
+  src: url('/fonts/qurova-font-family/Qurova-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova';
+  src: url('/fonts/qurova-font-family/Qurova-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova';
+  src: url('/fonts/qurova-font-family/Qurova-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa-font-family/NexaText-Trial-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa-font-family/NexaText-Trial-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa-font-family/NexaText-Trial-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #222222 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body {
+    @apply bg-sp-dark text-slate-100 font-body antialiased min-h-screen overflow-x-hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-title font-bold text-white;
+  }
+}
+
+/* Custom scrollbars for a premium dark mode layout */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glassmorphism custom classes */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-input {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  border-color: #00b8e6;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 184, 230, 0.2);
+}
+
+/* ==========================================================================
+   LIGHT MODE CORPORATE OVERRIDES FOR MAIN SECTION (.light-theme)
+   ========================================================================== */
+/* ==========================================================================
+   LIGHT MODE CORPORATE OVERRIDES FOR MAIN SECTION (.light-theme)
+   ========================================================================== */
+.light-theme {
+  background-color: #f6f6f6 !important;
+  color: #222222 !important;
+}
+
+/* Panels and Glass containers */
+.light-theme .glass-panel {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #222222 !important;
+  border-color: rgba(33, 88, 165, 0.08) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01) !important;
+}
+
+/* Sidebar conversations list: Unselected state */
+.light-theme .bg-slate-900\/60 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+.light-theme .bg-slate-900\/60:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Sidebar conversations list: Active state (Sanpress Blue corporate theme) */
+.light-theme .border-sp-cyan.bg-sp-cyan\/10 {
+  background-color: rgba(33, 88, 165, 0.08) !important;
+  border-color: #2158a5 !important;
+}
+
+.light-theme .border-sp-cyan.bg-sp-cyan\/10 * {
+  color: #2158a5 !important;
+}
+
+/* Chat Header and input footer area background */
+.light-theme .bg-slate-900\/80 {
+  background-color: #ffffff !important;
+  border-color: #f1f5f9 !important;
+}
+
+/* Central feed background */
+.light-theme .bg-slate-950\/20 {
+  background-color: #f8fafc !important;
+  border-left: 1px solid #f1f5f9 !important;
+  border-right: 1px solid #f1f5f9 !important;
+}
+
+/* Chat Message Bubbles: Inbound (received - Grey) */
+.light-theme .bg-slate-800.text-slate-100 {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.light-theme .bg-slate-800.text-slate-100 * {
+  color: #334155 !important;
+}
+
+/* Chat Message Bubbles: Outbound (sent - Blue) & Accent Buttons */
+.light-theme .bg-sp-blue,
+.light-theme .bg-sp-blue *,
+.light-theme .bg-sp-magenta,
+.light-theme .bg-sp-magenta *,
+.light-theme button.text-white,
+.light-theme button.text-white *,
+.light-theme button[type="submit"],
+.light-theme button[type="submit"] * {
+  color: #ffffff !important;
+}
+
+.light-theme .bg-sp-blue .text-sp-cyan {
+  color: #00b8e6 !important;
+}
+
+/* Quick Response Preset Buttons */
+.light-theme .bg-slate-800 {
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+}
+
+.light-theme .bg-slate-800:hover {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Text fields and dropdown boxes */
+.light-theme input,
+.light-theme select,
+.light-theme textarea,
+.light-theme .bg-slate-950 {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #222222 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.light-theme input:focus,
+.light-theme select:focus,
+.light-theme textarea:focus {
+  border-color: #2158a5 !important;
+  box-shadow: 0 0 0 2px rgba(33, 88, 165, 0.15) !important;
+}
+
+.light-theme input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Text and Titles */
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme h5,
+.light-theme h6,
+.light-theme .text-white,
+.light-theme .text-slate-100 {
+  color: #1e293b !important;
+}
+
+.light-theme .text-slate-200,
+.light-theme .text-slate-300,
+.light-theme .text-slate-350,
+.light-theme .text-slate-400 {
+  color: #475569 !important;
+}
+
+.light-theme .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Custom scrollbars for light theme */
+.light-theme ::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+.light-theme ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+

@@ -1,0 +1,29 @@
+# Dependências
+node_modules/
+
+# Build do frontend
+client/dist/
+
+# Banco de dados local (SQLite)
+server/data/*.db
+server/data/*.sqlite
+
+# Sessões do WhatsApp (dados sensíveis de autenticação)
+server/data/whatsapp-auth/
+
+# Arquivos de impressão enviados pelos clientes
+server/data/uploads/
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / Sistema
+.vscode/
+.DS_Store
+Thumbs.db
