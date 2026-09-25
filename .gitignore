@@ -3,27 +3,38 @@ node_modules/
 
 # Build do frontend
 client/dist/
+dist/
 
 # Banco de dados local (SQLite)
-server/data/*.db
-server/data/*.sqlite
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
 
-# Sessões do WhatsApp (dados sensíveis de autenticação)
-server/data/whatsapp-auth/
+# Dados de runtime, mídias e sessões do WhatsApp
+server/data/*
+!server/data/.gitkeep
 
-# Arquivos de impressão enviados pelos clientes
+# Sessões e caches específicos
+server/data/media/
 server/data/uploads/
+server/data/test-auth/
+server/data/whatsapp-auth/
+server/data/lid-mapping.json
 
 # Variáveis de ambiente
 .env
-.env.local
-.env.production
+.env.*
+!.env.example
 
 # Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Editor / Sistema
+# Editor / Sistema Operacional
 .vscode/
+.idea/
 .DS_Store
 Thumbs.db
